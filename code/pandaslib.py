@@ -9,8 +9,9 @@ def clean_currency(item: str) -> float:
 def extract_year_mdy(timestamp):
     '''
     use the datatime.strptime to parse the date and then extract the year
+    hms includes
     '''
-    return datetime.strptime(timestamp, '%m/%d/%Y').year
+    return datetime.strptime(timestamp, '%m/%d/%Y %H:%M:%S').year
 
 def clean_country_usa(item: str) ->str:
     '''
